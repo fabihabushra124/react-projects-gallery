@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-800;
+}
+
+@layer components {
+  .nav-link {
+    @apply relative block  capitalize py-2 px-3 text-white rounded;
+  }
+
+  .nav-link::after {
+    @apply absolute content-[''] w-full h-0.5 bottom-0 left-[-100%] bg-purple-600 opacity-0 duration-500;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    @apply left-0 opacity-100;
+  }
+}
+
+.b-line {
+  @apply border-b-2 border-b-purple-600;
+}
+
+.sub-h-box {
+  @apply bg-purple-600 bg-opacity-10 inline-block px-6 py-2 rounded-md;
+}
+
+.sub-h {
+  @apply text-white capitalize font-semibold text-3xl;
+}
+
+.slick-track {
+  @apply !flex;
+}
+
+.slick-slide {
+  @apply !h-[inherit];
+}
+
+.slick-slide > div {
+  @apply mx-2 !h-full;
+}
+
+/* the parent */
+.slick-list {
+  @apply -mx-1;
+}
