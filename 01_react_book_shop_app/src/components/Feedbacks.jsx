@@ -2,7 +2,7 @@ import Slider from 'react-slick';
 import { FaQuoteLeft } from 'react-icons/fa';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { feedbackList } from '../../feedbackData';
+import { feedbackList } from '../feedbackData';
 
 const Feedbacks = () => {
   const settings = {

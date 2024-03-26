@@ -3,7 +3,7 @@ const Loading = () => {
     <div
       aria-label='Loading...'
       role='status'
-      className='flex justify-center items-center space-x-2'
+      className='flex justify-center items-center space-x-2 mt-10'
     >
       <svg
         className='h-20 w-20 animate-spin stroke-purple-400'
