@@ -1,6 +1,7 @@
 import Hero from './components/Hero/Hero';
 import HowWork from './components/HowItWorks/HowWork';
 import Navbar from './components/Navbar';
+import Popular from './components/Popular';
 import WhyChoose from './components/WhyChoose';
 
 const App = () => {
@@ -9,7 +10,8 @@ const App = () => {
       <Navbar />
       <Hero />
       <HowWork />
-      <WhyChoose/>
+      <WhyChoose />
+      <Popular />
     </>
   );
 };

@@ -1,3 +1,5 @@
+import jaguarFPace from './assets/images/popular_car1.png';
+
 export const carData = [
   {
     name: 'Jaguar F PACE',
@@ -9,6 +11,8 @@ export const carData = [
     fuel: 'diesel',
     fuelCapacity: '60 Litres',
     transmission: 'Automatic',
+    img: jaguarFPace,
+    price: '$50',
   },
   {
     name: 'Toyota Camry',
@@ -54,15 +58,15 @@ export const carData = [
     fuelCapacity: '60 Litres',
     transmission: 'Automatic',
   },
-  {
-    name: 'Honda Clarity Fuel Cell',
-    engine: '2979 cc',
-    mileage: '14.03 kmpl',
-    body: 'Sedan',
-    airConditioner: 'yes',
-    passengers: '5',
-    fuel: 'Petrol',
-    fuelCapacity: '60 Litres',
-    transmission: 'Automatic',
-  },
+  // {
+  //   name: 'Honda Clarity Fuel Cell',
+  //   engine: '2979 cc',
+  //   mileage: '14.03 kmpl',
+  //   body: 'Sedan',
+  //   airConditioner: 'yes',
+  //   passengers: '5',
+  //   fuel: 'Petrol',
+  //   fuelCapacity: '60 Litres',
+  //   transmission: 'Automatic',
+  // },
 ];

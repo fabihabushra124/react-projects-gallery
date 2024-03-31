@@ -206,7 +206,8 @@ nav.scrolled {
 }
 
 #itswork,
-#whychoose {
+#whychoose,
+#popular {
   padding: 4rem 0;
 }
 
@@ -387,4 +388,45 @@ input[type='number'] {
   white-space: pre-line;
   margin: 0;
   line-height: 1.2;
+}
+
+/* Populer deals */
+.populer-filter-btn {
+  display: block;
+  background: transparent;
+  padding: 6px 30px;
+  border: 1px solid var(--blue-400);
+  border-radius: 0;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  transition: all 0.45s ease-in-out;
+  width: 200px;
+  outline: 0;
+  color: var(--blue-400);
+}
+
+.populer-filter-btn:hover {
+  background: var(--blue-400);
+  color: var(--white-900);
+}
+
+#popular .price-head {
+  background: var(--blue-400);
+  color: var(--white-900);
+  text-align: center;
+  padding: 3px;
+}
+
+#popular .info-item {
+  display: flex;
+  padding: 3px;
+  border: 0 1px 1px;
+  border-color: var(--blue-400);
+}
+
+#popular .info-text {
+  width: 50%;
+  text-align: center;
+  margin: 0;
+  text-transform: capitalize;
 }
