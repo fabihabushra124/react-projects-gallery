@@ -1,7 +1,10 @@
+import Footer from './components/Footer';
 import Hero from './components/Hero/Hero';
 import HowWork from './components/HowItWorks/HowWork';
+import MobileApp from './components/MobileApp';
 import Navbar from './components/Navbar';
 import Popular from './components/Popular';
+import Testimonial from './components/Testimonials';
 import WhyChoose from './components/WhyChoose';
 
 const App = () => {
@@ -12,6 +15,9 @@ const App = () => {
       <HowWork />
       <WhyChoose />
       <Popular />
+      <Testimonial />
+      <MobileApp />
+      <Footer />
     </>
   );
 };

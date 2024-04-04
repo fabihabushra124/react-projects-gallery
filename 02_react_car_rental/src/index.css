@@ -1,10 +1,10 @@
 :root {
   --blue-900: #051c34;
   --blue-400: #1572d3;
-  --blue-200: #ecf5ff;
+  --blue-200: #d9e8f9;
   --black-900: #000000;
   --black-800: #242424;
-  --black-700: #262626;
+  --black-700: #252525;
   --black-600: #272727;
   --black-500: #282828;
   --black-400: #292929;
@@ -21,6 +21,7 @@
   --white-900: #ffffff;
   --white-800: #f0f0f0;
   --white-700: #d6d6d6;
+  --yellow-clr: #efbf14;
   --slider-calc: 325px * 12;
 }
 
@@ -44,7 +45,7 @@
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul {
   list-style: none;
-  padding: 0;
+  padding: 0 !important;
 }
 
 /* Set core root defaults */
@@ -67,6 +68,7 @@ body {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
+  text-decoration: none;
 }
 
 /* Make images easier to work with */
@@ -147,6 +149,7 @@ h5 {
   padding: 5px 8px;
   background: var(--blue-200);
   color: var(--blue-400);
+  border-radius: 5px;
 }
 
 .sub-h {
@@ -207,7 +210,10 @@ nav.scrolled {
 
 #itswork,
 #whychoose,
-#popular {
+#popular,
+#testimonials,
+#mobileApp,
+#footer {
   padding: 4rem 0;
 }
 
@@ -232,8 +238,8 @@ nav.scrolled {
   position: absolute;
   width: 135px;
   height: 20px;
-  background: url('../src/assets/images/h1_big_b_border.png') no-repeat center
-    center / contain;
+  background: url('./assets/images/h1_big_b_border.png') no-repeat center center /
+    contain;
   bottom: -8px;
   left: -21px;
 }
@@ -390,8 +396,8 @@ input[type='number'] {
   line-height: 1.2;
 }
 
-/* Populer deals */
-.populer-filter-btn {
+/* Popular deals */
+#popular .popular-filter-btn {
   display: block;
   background: transparent;
   padding: 6px 30px;
@@ -405,9 +411,17 @@ input[type='number'] {
   color: var(--blue-400);
 }
 
-.populer-filter-btn:hover {
+#popular .popular-filter-btn:hover,
+#popular .popular-filter-btn.active {
   background: var(--blue-400);
   color: var(--white-900);
+}
+
+#popular .car-detail {
+  width: 80%;
+  margin: auto;
+  border-left: 1px solid var(--blue-400);
+  border-right: 1px solid var(--blue-400);
 }
 
 #popular .price-head {
@@ -420,7 +434,7 @@ input[type='number'] {
 #popular .info-item {
   display: flex;
   padding: 3px;
-  border: 0 1px 1px;
+  border-bottom: 1px solid var(--blue-400);
   border-color: var(--blue-400);
 }
 
@@ -429,4 +443,145 @@ input[type='number'] {
   text-align: center;
   margin: 0;
   text-transform: capitalize;
+}
+
+/* Testimonials */
+#testimonials {
+  background: url('./assets/images/customers_say_back.png') no-repeat top center /
+    cover;
+}
+#testimonials .slick-track {
+  display: flex !important;
+  padding: 20px 0px;
+}
+
+#testimonials .slick-slide {
+  height: inherit;
+}
+
+#testimonials .slick-slide > div {
+  display: flex;
+  margin: 0 0.5rem;
+  height: 100% !important;
+  padding: 1rem 0;
+}
+
+#testimonials .slick-list {
+  margin: 0 -0.25rem;
+}
+
+#testimonials .testimonial-card {
+  display: flex !important;
+  background: var(--white-900);
+  max-width: 568px;
+  border-radius: 20px;
+  box-shadow: 0 10px 10px 0 rgba(118, 116, 116, 0.3);
+  overflow: hidden;
+}
+
+#testimonials .img-box {
+  max-width: 204px;
+}
+
+#testimonials .img-box img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  height: 100%;
+}
+
+#testimonials .content {
+  padding: 10px;
+}
+
+#testimonials .content h5 {
+  font-weight: 600;
+  text-transform: lowercase;
+  color: var(--black-200);
+  margin: 0;
+}
+
+#testimonials .content .star {
+  display: inline;
+  color: var(--yellow-clr);
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+#testimonials .content .feedback {
+  color: var(--black-500);
+  font-size: 15px;
+  margin: 20px 0;
+}
+
+#testimonials .content .name,
+#testimonials .content .location {
+  text-transform: capitalize;
+  margin: 0;
+}
+
+#testimonials .content .name {
+  color: var(--black-700);
+  font-size: 22px;
+}
+
+#testimonials .content .location {
+  color: var(--gray-600);
+  font-size: 13px;
+}
+
+/* Mobile app */
+#mobileApp {
+  background: url('./assets/images/download_mobile_app_fraim.png') no-repeat
+    left center/contain;
+  padding-bottom: 0;
+}
+
+#mobileApp .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Footer */
+#footer {
+  background: var(--blue-900);
+  color: var(--gray-300);
+}
+
+#footer a {
+  color: var(--gray-300);
+  text-transform: capitalize;
+}
+
+#footer a:hover {
+  color: var(--white-900);
+}
+
+#footer h5 {
+  color: var(--white-900);
+}
+
+#footer .social-icon {
+  font-size: 2.3rem;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+#footer .social-icon:hover {
+  color: var(--white-900);
+}
+
+/* Responsive design */
+@media screen and (max-width: 992px) {
+  #mobileApp {
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  #testimonials .img-box {
+    max-width: 182px;
+  }
 }

@@ -1,8 +1,12 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-const Button = ({ name, className, icon }) => {
+const Button = ({ name, className, icon, onClick }) => {
   return (
-    <button type='button' className={`custom-btn ${className}`}>
+    <button
+      type="button"
+      onClick={onClick}
+      className={`custom-btn ${className}`}
+    >
       {name} {icon}
     </button>
   );
@@ -14,4 +18,5 @@ Button.propTypes = {
   name: PropTypes.string,
   className: PropTypes.string,
   icon: PropTypes.object,
+  onClick: PropTypes.func,
 };
