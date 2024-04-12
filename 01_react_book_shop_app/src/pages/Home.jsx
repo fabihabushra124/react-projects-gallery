@@ -3,9 +3,9 @@ import Footer from '../components/Footer';
 
 import Navbar from '../components/Navbar';
 import NewArrivals from '../components/NewArrivals';
-import Populer from '../components/Populer';
+import Popular from '../components/Popular';
 import Header from '../components/Header';
-import MiddSection from '../components/MiddSection';
+import MidSection from '../components/MidSection';
 import Feedbacks from '../components/Feedbacks';
 
 const Home = () => {
@@ -16,8 +16,8 @@ const Home = () => {
       <main>
         <Facilities />
         <NewArrivals />
-        <MiddSection />
-        <Populer />
+        <MidSection />
+        <Popular />
         <Feedbacks />
       </main>
       <Footer />

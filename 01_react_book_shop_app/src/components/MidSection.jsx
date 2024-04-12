@@ -1,5 +1,5 @@
 import bgFixed from '../assets/img/fixed-bg.jpg';
-const MiddSection = () => {
+const MidSection = () => {
   return (
     <div
       className='relative w-full h-96 bg-fixed bg-cover bg-center b-line'
@@ -14,4 +14,4 @@ const MiddSection = () => {
   );
 };
 
-export default MiddSection;
+export default MidSection;

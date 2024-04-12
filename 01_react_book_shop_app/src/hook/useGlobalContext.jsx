@@ -7,7 +7,7 @@ import React, {
   useState,
 } from 'react';
 
-// console.log(import.meta.env);
+console.log(import.meta.env);
 
 const url = 'https://www.googleapis.com/books/v1/volumes?q=';
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -19,7 +19,7 @@ export const AppProvider = ({ children }) => {
   const [search, setSearch] = useState('a');
   const [searchedBooks, setSearchedBooks] = useState([]);
   const [newBooks, setNewBooks] = useState([]);
-  const [populerBooks, setPopulerBooks] = useState([]);
+  const [popularBooks, setPopularBooks] = useState([]);
 
   const fetchNewBooks = useCallback(async () => {
     setLoading(true);
@@ -53,7 +53,7 @@ export const AppProvider = ({ children }) => {
     }
   }, []);
 
-  const fetchPopulerBooks = useCallback(async () => {
+  const fetchPopularBooks = useCallback(async () => {
     setLoading(true);
     try {
       const response = await fetch(
@@ -74,9 +74,9 @@ export const AppProvider = ({ children }) => {
           };
         });
         // console.log(booksInfo);
-        setPopulerBooks(booksInfo);
+        setPopularBooks(booksInfo);
       } else {
-        setPopulerBooks([]);
+        setPopularBooks([]);
       }
 
       setLoading(false);
@@ -121,19 +121,19 @@ export const AppProvider = ({ children }) => {
 
   useEffect(() => {
     fetchNewBooks();
-    fetchPopulerBooks();
+    fetchPopularBooks();
     fetchBooks();
-  }, [fetchNewBooks, fetchPopulerBooks, fetchBooks]);
+  }, [fetchNewBooks, fetchPopularBooks, fetchBooks]);
 
   const cardValues = useMemo(
     () => ({
       loading,
       searchedBooks,
       newBooks,
-      populerBooks,
+      popularBooks,
       setSearch,
     }),
-    [loading, searchedBooks, newBooks, populerBooks]
+    [loading, searchedBooks, newBooks, popularBooks]
   );
 
   return (

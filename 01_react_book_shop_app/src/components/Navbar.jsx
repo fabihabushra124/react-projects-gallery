@@ -12,7 +12,7 @@ const Navbar = () => {
   const lists = [
     { name: 'home', to: 'hero' },
     { name: 'new arrivals', to: 'newArrivals' },
-    { name: 'populer', to: 'populer' },
+    { name: 'popular', to: 'popular' },
     { name: 'feedbacks', to: 'feedbacks' },
     { name: 'contact', to: 'contact' },
   ];

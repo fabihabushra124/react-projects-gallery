@@ -40,7 +40,7 @@ const Hero = () => {
           </div>
 
           <div className='col-lg-7 p-0'>
-            <div className='d-lg-flex align-items-lg-end justify-end h-100'>
+            <div className='d-flex align-items-end justify-content-end h-100'>
               <img
                 src={heroCar}
                 className='img-fluid'
