@@ -1,0 +1,16 @@
+const url = 'https://real-time-amazon-data.p.rapidapi.com/products-by-category?category_id=2478868012&page=1&country=US&sort_by=RELEVANCE&product_condition=ALL&is_prime=false';
+const options = {
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': '451e8dbc92msh5e62e5d04cf18c9p1fa965jsncb04868c6162',
+		'x-rapidapi-host': 'real-time-amazon-data.p.rapidapi.com'
+	}
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+}
