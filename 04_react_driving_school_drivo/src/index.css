@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-slate-100;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply capitalize font-bold;
+  }
+  input,
+  textarea {
+    @apply border-none focus:border-none outline-none focus:outline-none placeholder:capitalize placeholder:text-gray-500 rounded-md p-2;
+  }
+  footer h3 {
+    @apply text-2xl mb-6;
+  }
+  footer a {
+    @apply capitalize;
+  }
+  footer i {
+    @apply mr-2;
+  }
+  footer li {
+    @apply mb-2;
+  }
+}
+
+@layer utilities {
+  header {
+    background-image: url('./assets/img/hero-image.png');
+  }
+
+  @media (max-width: 640px) {
+    header {
+      background-image: url('./assets/img/hero-image-m.png');
+    }
+  }
+
+  .parallax-bg {
+    background: url('./assets/img/parallax-bg.jpg') no-repeat fixed center/cover;
+  }
+  .embla__slide .img-box::before,
+  .embla__slide .img-box::after {
+    content: '';
+    height: 100%;
+    width: calc(100% - 32px);
+    position: absolute;
+    top: 0;
+    border-radius: 10px;
+    border: 1px solid #6485a6;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    z-index: -1;
+  }
+  .embla__slide .img-box::before {
+    left: 0;
+    background-color: #6485a6;
+  }
+  .embla__slide .img-box::after {
+    height: calc(100% - 32px);
+    right: 0;
+    background-color: #f7f7f7;
+    -webkit-clip-path: polygon(
+      10px 0px,
+      100% 0,
+      100% 100%,
+      calc(100% - 32px) 100%
+    );
+    clip-path: polygon(10px 0px, 100% 0, 100% 100%, calc(100% - 32px) 100%);
+  }
+  .img-box .icon-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    inset: 0;
+    width: 100%;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: bottom center;
+    transform-origin: bottom center;
+    transition: 0.5s ease-in-out;
+  }
+  .img-box:hover .icon-box {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  .img-box .icon {
+    font-size: 1.7rem;
+    margin: 5px;
+    /* transform: translateX(100%) tr */
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative block capitalize py-2 px-3 rounded;
+  }
+  .nav-link::after {
+    @apply absolute content-[''] w-full h-0.5 bottom-0 left-[-100%] bg-[#6485a6] opacity-0 duration-500;
+  }
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    @apply left-0 opacity-100;
+  }
+  .nav-link:hover,
+  .nav-link.active {
+    @apply text-[#6485a6];
+  }
+  .section-title {
+    @apply uppercase md:mb-4 mb-2 text-[#6485a6] tracking-wider;
+  }
+  .sub-heading {
+    @apply text-[clamp(1.5rem,4.8vw,2.8rem)] leading-tight tracking-wide;
+  }
+  .fact {
+    @apply p-5 bg-white hover:bg-[#6485a6] hover:text-white drop-shadow-xl transition;
+  }
+  .fact .icon {
+    @apply w-20 h-20 flex justify-center items-center rounded-full bg-[#024d98] text-white text-5xl mb-4 mx-auto;
+  }
+  .fact h3 {
+    @apply text-xl text-center mb-2;
+  }
+  .fact p {
+    @apply text-center;
+  }
+  .embla {
+    @apply overflow-hidden;
+  }
+  .embla__container {
+    @apply flex;
+  }
+}
