@@ -481,6 +481,7 @@ input[type='number'] {
 
 #testimonials .img-box {
   max-width: 204px;
+  width: 45%;
 }
 
 #testimonials .img-box img {
@@ -491,6 +492,7 @@ input[type='number'] {
 
 #testimonials .content {
   padding: 10px;
+  width: 55%;
 }
 
 #testimonials .content h5 {
@@ -577,11 +579,5 @@ input[type='number'] {
   #mobileApp {
     background-position: center;
     background-size: cover;
-  }
-}
-
-@media screen and (max-width: 765px) {
-  #testimonials .img-box {
-    max-width: 182px;
   }
 }

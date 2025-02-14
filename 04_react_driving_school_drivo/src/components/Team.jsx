@@ -69,7 +69,7 @@ const Team = () => {
   return (
     <section
       ref={containerRef}
-      className={`py-16 px-2 container mx-auto min-h-screen ${
+      className={`py-16 px-2 container mx-auto ${
         scrolling ? 'animate-[fadeIn_2s_linear]' : 'opacity-0'
       }`}
       id='instructors'

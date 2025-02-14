@@ -1,0 +1,303 @@
+:root {
+  --primary-blue: #0360d9;
+  --secondary-blue: #e1eeff;
+  --nav-link-blue: #0d2b46;
+  --primary-dark-blue: #021526;
+  --secondary-dark-blue: #163048;
+  --primary-black: #000;
+  --secondary-black: #2e2e2e;
+}
+
+body {
+  color: var(--secondary-black);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6 {
+  text-transform: capitalize;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.dark-blue-h {
+  color: var(--primary-dark-blue);
+}
+
+.blue-text {
+  color: var(--primary-blue);
+}
+
+.side-img {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 20px;
+}
+
+/* ****** Navbar ****** */
+nav {
+  background: var(--secondary-blue);
+}
+
+.navbar-toggler {
+  border: 0;
+  outline: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: var(--nav-link-blue);
+  overflow: hidden;
+  margin: 0 4px;
+  text-transform: capitalize;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-blue);
+  bottom: 0;
+  left: -100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--primary-blue);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  left: 0;
+}
+
+.navbar-nav .btn {
+  border-radius: 50px;
+  padding: 5px 25px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.navbar-nav .btn-primary {
+  background: var(--primary-blue);
+}
+
+.navbar-nav .btn-primary:hover {
+  background: #1d6dd6;
+}
+
+.navbar-nav .btn-outline-primary {
+  color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+.navbar-nav .btn-outline-primary:hover {
+  color: var(--secondary-blue);
+  background: var(--primary-blue);
+}
+
+/* ****** Hero ****** */
+.hero {
+  background: var(--secondary-blue);
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  align-items: end;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 50px;
+}
+
+.hero .curve-line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 38%;
+}
+
+.hero p {
+  color: var(--secondary-dark-blue);
+}
+
+.hero .dropdown-toggle::after {
+  display: none;
+}
+
+.hero-img {
+  margin-top: 60px;
+  max-width: 575px;
+  width: 100%;
+}
+
+.half-circle {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: #a5ccff;
+  border-radius: 50%;
+  bottom: -30%;
+  right: 3%;
+  z-index: -1;
+}
+
+.counter-box {
+  position: absolute;
+  background: var(--primary-blue);
+  width: 100vw;
+  bottom: 0;
+  z-index: -1;
+}
+
+.counter-box h4 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.counter-box p {
+  color: white;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+/* ****** Cards ****** */
+.card {
+  border-color: #021526;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.card:hover {
+  background: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+.card .circular-icon {
+  background: #e6f5fc;
+  padding: 15px;
+  width: 70px;
+  border-radius: 50%;
+  margin: 1rem;
+  margin-bottom: 0;
+}
+
+.card .card-title {
+  text-transform: capitalize;
+  font-weight: bold;
+  color: var(--primary-dark-blue);
+}
+
+.card .card-text {
+  color: var(--secondary-dark-blue);
+}
+
+.card:hover .card-title,
+.card:hover .card-text {
+  color: white;
+}
+
+/* ****** Testimonial ****** */
+.img-list img {
+  width: 52px;
+  height: 52px;
+  aspect-ratio: 1/1;
+}
+
+.img-list img:not(:first-child) {
+  margin-left: -1.3rem;
+}
+
+.reviews {
+  text-transform: capitalize;
+  margin-left: 1.5rem;
+}
+
+.testimonial-card {
+  border-radius: 20px;
+  border: 1px solid #a8a8a8;
+}
+
+/* ****** Subscribe ****** */
+.subscribe-h {
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-control {
+  border: 0;
+  outline: 0;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border: 0;
+  outline: 0;
+}
+
+@media (max-width: 992px) {
+  h2 {
+    font-size: 30px;
+  }
+
+  .hero {
+    height: 95vh;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-img {
+    margin-top: 0;
+  }
+
+  .half-circle {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: -14%;
+    right: 0;
+    left: 0;
+  }
+
+  .counter-box {
+    z-index: 10;
+  }
+
+  .counter-box h4 {
+    font-size: 30px;
+  }
+
+  .subscribe-h {
+    font-size: 27px;
+    margin-bottom: 1.4rem;
+  }
+}

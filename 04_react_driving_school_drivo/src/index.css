@@ -7,7 +7,7 @@
     @apply scroll-smooth;
   }
   body {
-    @apply bg-slate-100;
+    @apply bg-slate-100 overflow-x-hidden;
   }
   h1,
   h2,
@@ -35,7 +35,7 @@
 
 @layer utilities {
   header {
-    background-image: url('./assets/img/hero-image.png');
+    background-image: url('./assets/img/hero-image.jpg');
   }
 
   @media (max-width: 640px) {

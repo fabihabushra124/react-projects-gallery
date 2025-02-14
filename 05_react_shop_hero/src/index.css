@@ -1,0 +1,558 @@
+:root {
+  --primary-clr: #485a58;
+  --secondary-clr: #a68967;
+  --transition: all 0.4s ease-out;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style: none;
+  padding: 0 !important;
+}
+
+.center-align {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn {
+  border: 0 !important;
+  outline: 0 !important;
+  background: var(--primary-clr) !important;
+  color: #fff !important;
+  font-size: 16px !important;
+  text-transform: capitalize !important;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: #637b79 !important;
+}
+
+.bg-blue {
+  background: var(--primary-clr);
+}
+
+.logo {
+  width: 200px;
+  height: 32px;
+}
+
+nav form {
+  min-width: 340px;
+}
+
+nav form input.form-control {
+  background: url(./assets/icons/search.png) no-repeat;
+  background-position: 6px 7px;
+  padding: 0.4rem 0.4rem 0.4rem 2.2rem;
+  background-color: #fff;
+}
+
+nav form input::placeholder {
+  color: #989898;
+  font-size: 14px;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(168, 165, 165, 0.93);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: #fff;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+  color: #fff;
+}
+
+.navbar-toggler {
+  border: 0;
+  outline: 0;
+}
+
+.navbar-toggler .menu-bar img {
+  width: 34px;
+  transform: scaleX(-1);
+  filter: brightness(0) invert(1);
+}
+
+.hero {
+  overflow: hidden;
+  background: url(./assets/images/hero_bg.png) no-repeat center center / cover;
+  transform: scaleX(1);
+}
+
+.hero .iphone {
+  max-height: 72vh;
+  margin-top: 5rem;
+}
+
+.hero h1 {
+  font-size: 4.2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.hero .pro-beyond {
+  color: var(--primary-clr);
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+.hero h1 .iphone-txt {
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.hero .hero-btn {
+  height: 45px;
+  width: 190px;
+}
+
+.products .ipad-img-box {
+  position: relative;
+  min-width: 302px;
+  height: 235px;
+  overflow: hidden;
+}
+
+.products .ipad-img-box img {
+  position: absolute;
+  left: -60px;
+  bottom: -20px;
+}
+
+.products .airpod {
+  background: #aaaaac;
+  overflow: hidden;
+}
+
+.products .airpod-img-box {
+  position: relative;
+  width: 65%;
+  height: 262px;
+}
+
+.products .airpod-img-box img {
+  position: absolute;
+  top: -64%;
+  left: -6%;
+}
+
+.products .airpod-txt {
+  padding: 1.2rem;
+}
+
+.products .airpod-txt h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.products .airpod-txt h2 .light {
+  font-weight: 300;
+}
+
+.products .airpod-txt p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.macbook {
+  background: #f4cde0;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.macbook h2 .mac-b {
+  font-weight: 100;
+}
+
+.macbook p {
+  font-size: 14px;
+}
+
+.macbook .mac-b-img-box {
+  position: relative;
+  min-width: 225px;
+  height: 395px;
+}
+
+.macbook .mac-b-img-box img {
+  position: absolute;
+  height: 100%;
+}
+
+.products .product-btn {
+  height: 35px;
+  width: 170px;
+}
+
+.category .category-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: #ededed;
+  max-width: 150px;
+  height: 130px;
+  border-radius: 10px;
+  margin: 1.25rem 1.25rem 0 0;
+  cursor: pointer;
+}
+
+.category .category-card p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.category .carousel {
+  position: relative;
+}
+
+.category .carousel .caro-btns {
+  position: absolute;
+  width: 120px;
+  top: -28px;
+  right: 0;
+}
+
+.category .carousel-control-prev,
+.category .carousel-control-next {
+  width: 50px;
+}
+
+.card-box ul a {
+  position: relative;
+  color: #888;
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.card-box ul a::after {
+  content: '';
+  position: absolute;
+  background: #000;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: -5px;
+  transition: var(--transition);
+}
+
+.card-box ul a.current::after,
+.card-box ul a:hover::after {
+  width: 100%;
+}
+
+.card-box ul a.current,
+.card-box ul a:hover {
+  color: #000;
+}
+
+.card-box .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  max-width: 240px;
+  margin: 1.5rem 1.5rem 0 0;
+  text-align: center;
+}
+
+.card-box .card h5 {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.card-box .card .card-img-top {
+  max-width: 160px;
+  margin-top: 1rem;
+}
+
+.card-box .card .card-body {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.card-box .card .black-btn {
+  background: #000 !important;
+  height: 40px !important;
+  width: 175px !important;
+}
+
+.card-box .card .favorite {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 1.6rem;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: #aaa;
+}
+
+.card-box .card .favorite i.red {
+  color: #ff0000;
+}
+
+.sale-banner {
+  padding: 2rem 0;
+  background: var(--secondary-clr);
+  margin: 0;
+  align-items: center;
+  overflow: hidden;
+}
+
+.sale-banner .tab-1 {
+  position: relative;
+  min-height: 312px;
+}
+
+.sale-banner .tab-1 img {
+  position: absolute;
+  left: -25%;
+  height: 100%;
+}
+
+.sale-banner .tab-2 {
+  position: relative;
+  min-height: 327px;
+}
+
+.sale-banner .tab-2 img {
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+
+.sale-banner .sale-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sale-banner .sale-txt h5 {
+  color: #fff;
+  font-weight: 900;
+  font-size: 3.4rem;
+}
+
+.sale-banner .sale-txt h5 span {
+  color: var(--primary-clr);
+}
+
+.sale-banner .sale-txt p {
+  max-width: 350px;
+  color: #fff;
+}
+
+footer {
+  background: var(--primary-clr);
+  padding: 2rem 0;
+}
+
+.social-media li img {
+  margin-right: 15px;
+  transition: var(--transition);
+}
+
+.social-media li img:hover {
+  transform: translateY(-5px);
+}
+
+footer h6 {
+  color: #fff;
+  font-style: italic;
+  font-weight: 100;
+}
+
+footer .services a,
+footer .assistance a {
+  color: #cfcfcf;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+/* ****** Responsive Styles ****** */
+
+@media only screen and (max-width: 1264px) {
+  .products .airpod-img-box img {
+    top: -48%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  header .carousel-item .iphone {
+    max-height: 40vh;
+  }
+
+  header .carousel-item h1 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  /* ***** Products ***** */
+  .products .airpod-img-box img {
+    top: -70%;
+  }
+
+  .products .airpod-txt {
+    padding-right: 3rem;
+  }
+
+  .macbook {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .macbook .center-align {
+    max-width: 450px;
+    padding: 1.5rem;
+  }
+
+  .macbook .mac-b-img-box {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .macbook .mac-b-img-box img {
+    position: relative;
+    width: 480px;
+  }
+
+  /* ***** Sale banner ***** */
+  .sale-banner {
+    padding: 0;
+  }
+
+  .sale-banner .tab-1 {
+    min-height: 250px;
+  }
+
+  .sale-banner .tab-1 img {
+    top: -25%;
+    left: 32%;
+  }
+
+  .sale-banner .tab-2 {
+    min-height: 265px;
+  }
+
+  .sale-banner .tab-2 img {
+    bottom: -10%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .products .airpod-img-box {
+    height: 220px;
+  }
+
+  .products .airpod-img-box img {
+    top: -84%;
+    left: -17%;
+  }
+
+  .macbook .mac-b-img-box img {
+    width: 450px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .products .airpod-img-box {
+    width: 58%;
+  }
+
+  .products .airpod-img-box img {
+    top: -43%;
+    left: -34%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .products .airpod-txt h2,
+  .products h2,
+  .products h2 > * {
+    font-size: 1.2rem;
+  }
+
+  .products p {
+    font-size: 14px;
+  }
+
+  .products .ipad-img-box {
+    min-width: 258px;
+    height: 194px;
+  }
+
+  .products .airpod-img-box {
+    width: 50%;
+  }
+
+  .products .airpod-img-box img {
+    top: -19%;
+    left: -37%;
+  }
+
+  .macbook .mac-b-img-box img {
+    width: 380px;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .products .airpod-img-box {
+    height: 202px;
+  }
+
+  .products .airpod-img-box img {
+    left: -40%;
+  }
+
+  .macbook .mac-b-img-box img {
+    width: 340px;
+    height: 205px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .products .ipad-img-box {
+    min-width: 213px;
+  }
+
+  .products .ipad-img-box img {
+    left: -70px;
+    bottom: 0;
+  }
+
+  .products .airpod-img-box img {
+    left: -37%;
+    top: 0;
+  }
+
+  .products .airpod-txt {
+    padding-right: 0;
+  }
+}
